@@ -77,6 +77,13 @@ public class Player : MonoBehaviour
             case "Enemy":
                 Die();
                 break;
+        }
+    }
+    
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        switch (collider.transform.tag)
+        {
             case "Collectible":
                 break;
             case "LevelTarget":
